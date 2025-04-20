@@ -1,0 +1,70 @@
+# Игнорировать папки сборки и бинарные файлы
+[Bb]in/
+[Oo]bj/
+
+# Игнорировать файлы пользовательских настроек
+*.user
+*.suo
+*.userprefs
+
+# Игнорировать файлы резервных копий
+*.bak
+*.tmp
+
+# Игнорировать файлы пакетов NuGet
+**/[Pp]ackages/*
+!**/[Pp]ackages/repositories.config
+*.nupkg
+
+# Игнорировать файлы кэша Visual Studio
+.vs/
+.vscode/
+
+# Игнорировать файлы запуска
+*.launchsettings.json
+
+# Игнорировать файлы журналов и диагностики
+*.log
+*.sln.docstates
+
+# Игнорировать файлы тестовых покрытий
+*.coverage
+*.coveragexml
+
+# Игнорировать файлы Docker
+**/.dockerignore
+**/Dockerfile
+**/docker-compose.yml
+**/docker-compose.*.yml
+
+# Игнорировать файлы Azure
+**/.azure/
+
+# Игнорировать файлы Rider (JetBrains IDE)
+.idea/
+*.sln.iml
+
+# Игнорировать файлы ReSharper (JetBrains)
+_ReSharper.*
+*.ReSharper
+
+# Игнорировать файлы Rider (JetBrains)
+*.sln.dot
+
+# Игнорировать файлы локальных настроек
+appsettings.Development.json
+appsettings.Local.json
+
+# Игнорировать файлы резервных копий проектов
+*.backup
+*.backup.*
+
+# Игнорировать файлы временных данных
+*.tmp
+*.temp
+
+# Игнорировать файлы специфичные для macOS
+.DS_Store
+
+# Игнорировать файлы специфичные для Windows
+Thumbs.db
