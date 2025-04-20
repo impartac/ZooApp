@@ -26,8 +26,8 @@ namespace Presentation.Controllers
         {
             var animal = await _getHandler.Handle(command, CancellationToken.None);
             if (animal is null) return BadRequest();
-
-            return 
+            await _feedingOrganizationService.FeedAnimalAsync(command.Id);
+            return Ok();
         }
 
     }

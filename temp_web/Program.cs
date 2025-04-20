@@ -20,6 +20,7 @@ public class App
         builder.Services.AddSingleton<IRepository<Animal>, AnimalRepository>();
         builder.Services.AddSingleton<IRepository<Enclosure>, EnclosureRepository>();
         builder.Services.AddSingleton<IRepository<Schedule>, ScheduleRepository>();
+        builder.Services.AddSingleton<ZooStatistics>();
 
         builder.Services.AddScoped<IRequestHandler<CreateAnimalCommand, Animal>, CreateAnimalHandler>();
         builder.Services.AddScoped<IRequestHandler<GetCommand, Animal>, GetAnimalHandler>();
@@ -41,8 +42,14 @@ public class App
         builder.Services.AddScoped<IRequestHandler<AnimalTransferCommand, bool>, AnimalTransferHandler>();
 
         builder.Services.AddSingleton<IDomainEventDispatcher, MediatrDomainEventDispatcher>();
+        /*
+                builder.Services.AddSingleton<IDomainEventHandler<FeedingTimeEvent>, Fee>();*/
 
         builder.Services.AddSingleton<IZooStatisticService, ZooStatisticsService>();
+        builder.Services.AddSingleton<IFeedingOrganizationService, FeedingOrganizationService>();
+
+        builder.Services.AddMediatR(cfg =>
+            cfg.RegisterServicesFromAssemblyContaining<AnimalTransferHandler>());
 
         builder.Services.AddControllers();
 

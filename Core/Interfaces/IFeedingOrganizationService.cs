@@ -8,5 +8,6 @@ namespace Domain.Interfaces
 {
     public interface IFeedingOrganizationService
     {
+        public Task FeedAnimalAsync(Guid animalId);
     }
 }

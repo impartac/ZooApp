@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Application.Services
 {
-    public class FeedingOrganizationService
+    public class FeedingOrganizationService : IFeedingOrganizationService
     {
         private readonly IRepository<Animal> _animalRepository;
         private readonly IRepository<Schedule> _scheduleRepository;
